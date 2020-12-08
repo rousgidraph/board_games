@@ -5,12 +5,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class sudoku_controller {
+    @FXML
+    GridPane host;
 
     @FXML
     Button btn_back;
+    @FXML
+    Button btn_load;
 
     public void back(){
         Stage thisStage = (Stage) btn_back.getScene().getWindow();
@@ -23,6 +29,11 @@ public class sudoku_controller {
         }catch(Exception e ){
             e.printStackTrace();
         }
+    }
+
+    public void print_board(){
+
+    host.add(new Text("5"),2,2);
     }
 
 }

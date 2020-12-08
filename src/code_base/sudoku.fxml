@@ -13,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code_base.sudoku_controller">
    <children>
-      <GridPane layoutX="30.0" layoutY="41.0" prefHeight="400.0" prefWidth="400.0" style="-fx-grid-lines-visible: true;">
+      <GridPane fx:id="host" layoutX="30.0" layoutY="41.0" prefHeight="400.0" prefWidth="400.0" style="-fx-grid-lines-visible: true;">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -74,7 +74,7 @@
           <Button mnemonicParsing="false" text="Import" />
             <Button mnemonicParsing="false" text="Solve" />
             <Button mnemonicParsing="false" text="Clear" />
-            <Button mnemonicParsing="false" text="Button" />
+            <Button fx:id="btn_load" mnemonicParsing="false" onAction="#print_board" text="Load" />
         </buttons>
       </ButtonBar>
       <Button fx:id="btn_back" layoutX="30.0" layoutY="8.0" mnemonicParsing="false" onAction="#back" style="-fx-background-radius: 30px;" text="back" />
