@@ -6,17 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class index extends Application {
+public class grip_caller extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        //Parent root = FXMLLoader.load(getClass().getResource("index.fxml"));
-        Parent root = FXMLLoader.load(getClass().getResource("sudoku.fxml"));
-
-        stage.setTitle("Board");
+        Parent root = FXMLLoader.load(getClass().getResource("gridsample.fxml"));
         Scene scene = new Scene(root);
+        stage.setTitle("Click the grid");
         stage.setScene(scene);
         stage.show();
-        stage.centerOnScreen();
-
     }
 }
